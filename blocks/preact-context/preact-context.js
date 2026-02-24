@@ -1,5 +1,9 @@
-import { h, render, createContext } from '../../scripts/vendor/preact.js';
-import { useContext, useState } from '../../scripts/vendor/preact-hooks.js';
+// import { h, render, createContext } from '../../scripts/vendor/preact.js';
+// import { useContext, useState } from '../../scripts/vendor/preact-hooks.js';
+
+import { h, render, createContext } from '@dropins/tools/preact.js';
+import { useState, useContext } from '@dropins/tools/preact-hooks.js';
+
 import htm from '../../scripts/vendor/htm.js';
 
 const html = htm.bind(h);
@@ -32,7 +36,6 @@ function ThemeButton() {
 
 function ThemePanel() {
   const [theme, setTheme] = useState('light');
-
 
   const value = {
     theme,
