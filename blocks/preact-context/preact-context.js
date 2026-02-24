@@ -3,7 +3,6 @@
 
 import { h, render, createContext } from '@dropins/tools/preact.js';
 import { useState, useContext } from '@dropins/tools/preact-hooks.js';
-
 import htm from '../../scripts/vendor/htm.js';
 
 const html = htm.bind(h);
@@ -23,14 +22,7 @@ function ThemeButton() {
   const nextTheme = theme === 'light' ? 'dark' : 'light';
 
   return html`
-    <button
-      class="preact-context__button"
-      type="button"
-      aria-label=${`Switch theme to ${nextTheme}`}
-      onClick=${toggleTheme}
-    >
-      Switch to ${nextTheme}
-    </button>
+    <button class="preact-context__button" type="button" aria-label=${`Switch theme to ${nextTheme}`} onClick=${toggleTheme}>Switch to ${nextTheme}</button>
   `;
 }
 
